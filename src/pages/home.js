@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit-element";
 
+import "../components/introduction-section";
 import "../components/technologies-section";
 import "../components/hero-section";
 import "../components/app-shell";
@@ -10,6 +11,11 @@ export default class HomePage extends LitElement {
     return [
       theme,
       css`
+        hr {
+          width: 60%;
+          opacity: 0.5;
+          border-top: 1px solid var(--auxiliary-color-1);
+        }
       `,
     ];
   }
@@ -18,6 +24,8 @@ export default class HomePage extends LitElement {
     return html`
       <app-shell>
         <hero-section></hero-section>
+        <introduction-section></introduction-section>
+        <hr/>
         <technologies-section></technologies-section>
       </app-shell>
     `;

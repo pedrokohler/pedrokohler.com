@@ -49,8 +49,8 @@ export default class TypewriterTextEffect extends LitElement {
   }
 
   async writeAndEraseNextSentence() {
-    const delay = 1000;
-    const delayUncertainty = 200;
+    const delay = 500;
+    const delayUncertainty = 100;
 
     await this.writeSentence(this.textList[this.textIndex]);
     await this.wait(this.generateRandomInterval(delay, delayUncertainty));

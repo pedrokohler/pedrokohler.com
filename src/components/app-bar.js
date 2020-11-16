@@ -2,23 +2,17 @@ import { LitElement, html, css } from "lit-element";
 
 import "@appnest/web-router";
 
-import theme from "../styles/theme";
+import "./navigation-menu";
+
+import theme, { routerLinkStyle } from "../styles/theme";
 
 const AppBarHeight = 70;
 
-const navigationItems = [
-  { label: "Contact Me", path: "contact-me" },
-  { label: "Portfolio", path: "portfolio" },
-  { label: "Resumè", path: "resume" },
-  { label: "Blog", path: "blog" },
-  { label: "About Me", path: "about-me" },
-];
-
-// @todo make it responsive
 export default class AppBar extends LitElement {
   static get styles() {
     return [
       theme,
+      routerLinkStyle,
       css`
         section {
           background-color: var(--primary-color);
@@ -31,6 +25,7 @@ export default class AppBar extends LitElement {
           padding: 0 var(--regular-block-spacing);
 
           position: fixed;
+          z-index: 1;
           left: 0;
           top: 0;
           width: 100vw;
@@ -38,28 +33,8 @@ export default class AppBar extends LitElement {
           box-sizing: border-box;
         }
 
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          align-items: center;
-          list-style-type: none;
-        }
-
-        li {
-          margin-left: var(--larger-block-spacing);
-        }
-
         .spacer {
           height: ${AppBarHeight}px;
-        }
-
-        router-link {
-          cursor: pointer;
-        }
-
-        router-link:focus {
-          outline: none;
         }
     `,
     ];
@@ -75,24 +50,9 @@ export default class AppBar extends LitElement {
             </router-link>
           </h1>
         </header>
-        <nav>
-          <ul>
-            ${navigationItems.map(this.navigationItemTemplate)}
-          </ul>
-        </nav>
+        <navigation-menu></navigation-menu>
       </section>
       <div class="spacer"></div>
-    `;
-  }
-
-  navigationItemTemplate(item) {
-    const { path, label } = item;
-    return html`
-      <li>
-        <router-link path="${path}">
-          ${label}
-        </router-link>
-      </li>
     `;
   }
 }

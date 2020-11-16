@@ -9,7 +9,7 @@ import theme from "../styles/theme";
 const adjectives = [
   "Reliable",
   "Trustworthy",
-  "Efficient",
+  "Productive",
   "Focused",
   "Hard working",
   "Self-managed",
@@ -21,7 +21,7 @@ export default class HeroSection extends LitElement {
       theme,
       css`
         section {
-          height: 400px;
+          height: 500px;
 
           background-color: var(--primary-color);
           color: var(--primary-color-text);
@@ -30,6 +30,10 @@ export default class HeroSection extends LitElement {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
+          padding: 0 var(--smaller-block-spacing);
+
+          text-align: center;
         }
 
         img {
