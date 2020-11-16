@@ -68,7 +68,7 @@ export default class TechnologiesSection extends LitElement {
       theme,
       css`
         .main {
-          padding-top: var(--regular-block-spacing);
+          padding: var(--large-block-spacing) 0;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -86,6 +86,10 @@ export default class TechnologiesSection extends LitElement {
           box-sizing: border-box;
 
           padding: var(--regular-block-spacing);
+        }
+
+        h1 {
+          margin: var(--larger-block-spacing) 0;
         }
       `,
     ];

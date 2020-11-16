@@ -6,7 +6,6 @@ import theme, { routerLinkStyle } from "../styles/theme";
 import BurgerMenu from "../images/burger-menu.svg";
 
 const navigationItems = [
-  { label: "Contact Me", path: "contact-me" },
   { label: "Portfolio", path: "portfolio" },
   { label: "Resumè", path: "resume" },
   { label: "Blog", path: "blog" },

@@ -16,6 +16,10 @@ export default class HomePage extends LitElement {
           opacity: 0.5;
           border-top: 1px solid var(--auxiliary-color-1);
         }
+
+        div {
+          margin: var(--larger-block-spacing) 0;
+        }
       `,
     ];
   }
@@ -25,7 +29,7 @@ export default class HomePage extends LitElement {
       <app-shell>
         <hero-section></hero-section>
         <introduction-section></introduction-section>
-        <hr/>
+        <div><hr/></div>
         <technologies-section></technologies-section>
       </app-shell>
     `;
