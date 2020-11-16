@@ -20,9 +20,9 @@ export default class AppShell extends LitElement {
   render() {
     return html`
         <section>
-            <app-bar></app-bar>
-            <slot></slot>
-            <app-footer></app-footer>
+          <app-bar></app-bar>
+          <slot></slot>
+          <app-footer></app-footer>
         </section>
     `;
   }

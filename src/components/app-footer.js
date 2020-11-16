@@ -9,10 +9,10 @@ export default class AppFooter extends LitElement {
       theme,
       css`
         footer {
-            position: relative;
-            min-height: 100px;
-            background-color: var(--elevated-surface-color);
-            border-top: 1px black;
+          position: relative;
+          min-height: 100px;
+          background-color: var(--elevated-surface-color);
+          border-top: 1px black;
         }
       `,
     ];
@@ -21,7 +21,7 @@ export default class AppFooter extends LitElement {
   render() {
     return html`
         <footer>
-            <owner-signature></owner-signature>
+          <owner-signature></owner-signature>
         </footer>
     `;
   }

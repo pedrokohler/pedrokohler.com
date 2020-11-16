@@ -1,8 +1,19 @@
 import { LitElement, html, css } from "lit-element";
 
-import Picture from "../images/picture.jpg";
+import Picture from "../images/picture2.png";
+
+import "./typewriter-text-effect";
 
 import theme from "../styles/theme";
+
+const adjectives = [
+  "Reliable",
+  "Trustworthy",
+  "Efficient",
+  "Focused",
+  "Hard working",
+  "Self-managed",
+];
 
 export default class HeroSection extends LitElement {
   static get styles() {
@@ -22,6 +33,8 @@ export default class HeroSection extends LitElement {
         }
 
         img {
+          width: 200px;
+          height: 200px;
           border-radius: 50%;
           margin-bottom: var(--regular-block-spacing);
         }
@@ -33,7 +46,9 @@ export default class HeroSection extends LitElement {
     return html`
         <section>
           <img src="${Picture}" alt=""/>
-          <h2>A reliable, trustworthy web developer</h2>
+          <h2>
+            <typewriter-text-effect .textList="${adjectives}"></typewriter-text-effect> web developer
+          </h2>
         </section>
     `;
   }

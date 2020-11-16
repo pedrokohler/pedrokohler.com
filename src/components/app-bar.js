@@ -20,39 +20,38 @@ export default class AppBar extends LitElement {
     return [
       theme,
       css`
-        nav {
-            background-color: var(--primary-color);
-            color: var(--primary-color-text);
+        section {
+          background-color: var(--primary-color);
+          color: var(--primary-color-text);
 
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 var(--regular-block-spacing);
 
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 var(--regular-block-spacing);
-
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: ${AppBarHeight}px;
-            box-sizing: border-box;
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: ${AppBarHeight}px;
+          box-sizing: border-box;
         }
 
         ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            list-style-type: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          list-style-type: none;
         }
 
         li {
-            margin-left: var(--larger-block-spacing);
+          margin-left: var(--larger-block-spacing);
         }
 
         .spacer {
-            height: ${AppBarHeight}px;
+          height: ${AppBarHeight}px;
         }
 
         router-link {
@@ -68,24 +67,32 @@ export default class AppBar extends LitElement {
 
   render() {
     return html`
+      <section>
+        <header>
+          <h1>
+            <router-link path="">
+              Pedro Köhler
+            </router-link>
+          </h1>
+        </header>
         <nav>
-            <h1>Pedro Köhler</h1>
-            <ul>
-              ${navigationItems.map(this.navigationItemTemplate)}
-            </ul>
+          <ul>
+            ${navigationItems.map(this.navigationItemTemplate)}
+          </ul>
         </nav>
-        <div class="spacer"></div>
+      </section>
+      <div class="spacer"></div>
     `;
   }
 
   navigationItemTemplate(item) {
     const { path, label } = item;
     return html`
-        <li>
-          <router-link path="${path}">
-            ${label}
-          </router-link>
-        </li>
+      <li>
+        <router-link path="${path}">
+          ${label}
+        </router-link>
+      </li>
     `;
   }
 }
