@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit-element";
 
 import "../components/introduction-section";
+import "../components/testimonials-section";
 import "../components/technologies-section";
 import "../components/hero-section";
 import "../components/app-shell";
@@ -29,6 +30,8 @@ export default class HomePage extends LitElement {
       <app-shell>
         <hero-section></hero-section>
         <introduction-section></introduction-section>
+        <div><hr/></div>
+        <testimonials-section></testimonials-section>
         <div><hr/></div>
         <technologies-section></technologies-section>
       </app-shell>

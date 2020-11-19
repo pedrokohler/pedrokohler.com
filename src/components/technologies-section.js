@@ -68,7 +68,7 @@ export default class TechnologiesSection extends LitElement {
       theme,
       css`
         .main {
-          padding: var(--large-block-spacing) 0;
+          padding: var(--smaller-block-spacing) 0;
           display: flex;
           flex-direction: column;
           align-items: center;

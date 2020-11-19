@@ -24,13 +24,3 @@ export default css`
     --larger-block-spacing: 3em;
   }
 `;
-
-export const routerLinkStyle = css`
-  router-link {
-    cursor: pointer;
-  }
-
-  router-link:focus {
-    outline: none;
-  }
-`;

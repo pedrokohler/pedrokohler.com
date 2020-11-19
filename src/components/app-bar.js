@@ -2,9 +2,10 @@ import { LitElement, html, css } from "lit-element";
 
 import "@appnest/web-router";
 
-import "./navigation-menu";
+import "./navigation-menu/navigation-menu";
 
-import theme, { routerLinkStyle } from "../styles/theme";
+import { linkStyles } from "../styles/styles";
+import theme from "../styles/theme";
 
 const AppBarHeight = 70;
 
@@ -12,7 +13,7 @@ export default class AppBar extends LitElement {
   static get styles() {
     return [
       theme,
-      routerLinkStyle,
+      linkStyles,
       css`
         section {
           background-color: var(--primary-color);
