@@ -23,7 +23,7 @@ export default class HeroSection extends LitElement {
         section {
           height: 500px;
 
-          background-color: var(--primary-color);
+          background-color: var(--auxiliary-color-1);
           color: var(--primary-color-text);
 
           display: flex;

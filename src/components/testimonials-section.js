@@ -15,11 +15,14 @@ export default class TestimonialsSection extends LitElement {
       linkStyles,
       css`
         section {
-          padding: var(--smaller-block-spacing);
+          padding: var(--regular-block-spacing);
+
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
+          background-color: var(--elevated-surface-color);
         }
 
         h1 {
@@ -28,6 +31,7 @@ export default class TestimonialsSection extends LitElement {
 
         testimonial-entry {
           max-width: 720px;
+          color: var(--secondary-color-text);
         }
 
         @media (max-width: 720px) {

@@ -33,7 +33,7 @@ export default class TestimonialEntry extends LitElement {
           border-width: 1px black;
           border-radius: 5px;
           box-shadow: 3px 3px 3px 3px var(--shadow-color);
-          background-color: var(--elevated-surface-color);
+          background-color: var(--more-elevated-surface-color);
         }
 
         h3 {

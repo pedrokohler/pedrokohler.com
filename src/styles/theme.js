@@ -8,7 +8,7 @@ export default css`
     --secondary-color: #2D2A32;
     --secondary-color-text: #DDDDDD;
 
-    --auxiliary-color-1: #EAE151;
+    --auxiliary-color-1: #FDC41F;
     --auxiliary-color-2: #EEEFA8;
     --auxiliary-color-3: #FAFDF6;
 
@@ -18,6 +18,7 @@ export default css`
 
     --shadow-color: #222222;
     --elevated-surface-color: #3A3A3A;
+    --more-elevated-surface-color: #4C4C4C;
 
     --smaller-block-spacing: 1em;
     --regular-block-spacing: 2em;
