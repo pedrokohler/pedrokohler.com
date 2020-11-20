@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <script>
+    const pathSegmentsToKeep = 0;
+
+    const l = window.location;
+    const redirectPath = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+
+    const meta = document.createElement('meta');
+    meta.setAttribute('http-equiv', 'refresh');
+    meta.setAttribute('content', `0;url=${redirectPath}`);
+
+    console.log(meta);
+    document.getElementsByTagName('head')[0].appendChild(meta);
+  </script>
+</body>
+
+</html>
