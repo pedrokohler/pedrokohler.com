@@ -15,7 +15,7 @@ export default class IntroductionSection extends LitElement {
           align-items: center;
           justify-content: flex-start;
 
-          text-align: center;
+          text-align: left;
         }
 
         h1 {
@@ -28,14 +28,16 @@ export default class IntroductionSection extends LitElement {
   render() {
     return html`
         <section>
-          <header>
-            <h1>
-              Nice to meet you!
-            </h1>
-          </header>
-          <p>I'm a web developer that loves new challenges and I'm glad you're interested in my work.</p>
-          <p>You can get to know me a little better by browsing around a bit.</p>
-          <p>Also, feel free to <strong>send me a message</strong> in the chat box below!</p>
+          <slot name="introduction-content">
+            <header>
+              <h1>
+                Nice to meet you!
+              </h1>
+            </header>
+            <p>I'm a web developer that loves new challenges and I'm glad you're interested in my work.</p>
+            <p>You can get to know me a little better by browsing around a bit.</p>
+            <p>Also, feel free to <strong>send me a message</strong> in the chat box below!</p>
+          </slot>
         </section>
     `;
   }

@@ -24,6 +24,11 @@ customElements.whenDefined("router-slot").then(async () => {
       guards: [],
     },
     {
+      path: "cover-letter/chess",
+      component: () => import("./pages/cover-letter"),
+      guards: [],
+    },
+    {
       path: "",
       component: () => import("./pages/home"),
       guards: [],

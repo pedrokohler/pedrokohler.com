@@ -13,4 +13,9 @@ export const linkStyles = css`
     color: inherit;
     text-decoration: inherit;
   }
+
+  a.styled {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
 `;
