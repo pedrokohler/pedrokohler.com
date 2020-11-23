@@ -5,17 +5,17 @@ customElements.whenDefined("router-slot").then(async () => {
   await routerSlot.add([
     {
       path: "portfolio",
-      component: () => import("./pages/coming-soon"),
+      component: () => import("./pages/redirect"),
       guards: [],
     },
     {
       path: "resume",
-      component: () => import("./pages/coming-soon"),
+      component: () => import("./pages/redirect"),
       guards: [],
     },
     {
       path: "blog",
-      component: () => import("./pages/coming-soon"),
+      component: () => import("./pages/redirect"),
       guards: [],
     },
     {
