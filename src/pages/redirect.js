@@ -18,7 +18,7 @@ export default class RedirectPage extends LitElement {
       linkStyles,
       css`
         section {
-          height: 75vh;
+          height: 100vh;
           padding: var(--regular-block-spacing);
 
           display: flex;
@@ -75,7 +75,7 @@ export default class RedirectPage extends LitElement {
                 <br/> with the info you're looking for.
               </p>
               <p>If the page doesn't open automatically,
-                <br/> click this card to open it, or enable popups
+                <br/> click this card to open it, or enable pop-ups
                 <br/> and refresh the page.
               </p>
             </div>

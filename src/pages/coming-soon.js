@@ -9,7 +9,7 @@ export default class ComingSoonPage extends LitElement {
       theme,
       css`
         section {
-          height: 75vh;
+          height: 100vh;
           padding: var(--regular-block-spacing);
 
           display: flex;
